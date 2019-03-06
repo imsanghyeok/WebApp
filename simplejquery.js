@@ -1,8 +1,66 @@
-$(document).ready(function(){ // jquery는 $로 시작
+function colorEm(){
+    var $div = $("div");
+    var start = Math.floor(Math.random()*$div.length);
+    var end = Math.floor(Math.random()*($div.length-start)) + start + 1;
 
-    $("td").filter(function(index){
-        return index % 3 ==0;
-    }).css("background", "red");
+    if (end === $div.length){end = undefined;}
+    $div.css("background", "");
+    if (end){
+        $div.slice(start, end).css("background", "yellow");
+    }else {
+        $div.slice(start).css("background","yellow");
+    }
+    $("span").text("$('div').slice(" + start +
+        (end ? ", " + end : "") + ").css('background',  'yellow');");
+}
+
+$("button").click(colorEm);
+
+
+
+$(document).ready(function(){
+
+    $("td").css("background-color",function(index,value){
+        if(value=="rbg(255,255,0)") {return "red";}
+    });
+
+    //$("td").css("background", "blue");
+
+    // $("li").each(function(){
+    //     $(this).click(function(){
+    //         $(this).addClass("selected");
+    //         $(this).siblings().removeClass("selected");
+    //     });
+    // });
+
+    //$("div").find("p").css("border", "1px solid red");
+
+    //$("div").filter(".my").css("border", "1px solid red");
+
+    // $("div").filter("p").css("border", "1px solid red");
+
+        // $("ul").find("li").contents().remove("ul");
+
+    // $("li").add("div>p").css("border", "1px solid red");
+
+
+    // var litext = $("li").map(function (index){
+    //     return "[(" + index + ")" + $(this).text() + "]";
+    // }).get().join(',');
+    // $("#result").text(litext);
+
+
+    // $("*").each(function(){
+    //     if ($(this).is("li")){
+    //         $(this).css("border", "1px solid red");
+    //     }
+    // });
+
+    // $("li").has("ul").css("background", "red");
+
+    // $("td").filter(function(index){
+    //     return index % 3 ==0;
+    // }).css("background", "red");
 
     // $("td:nth-child(2n+1)").css("background","red");
     // $("li").css("margin", "5px");
@@ -38,4 +96,5 @@ $(document).ready(function(){ // jquery는 $로 시작
     // $("div[id^='high']").css("background", "#ccc"); //id가 high로 시작하는 태그는 적용해라
     // $("span[class$='de']").css("font-style", "italic"); //class가 de로 끝나는 태그 적용
     // $("div[id*='o']").css("font-style", "italic");
+
 });
