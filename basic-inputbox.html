@@ -16,6 +16,102 @@
             </div>
 
             <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="textarea1">도시설명</label>
+                    <textarea id="txtarea1" rows="5" cols="25"></textarea>
+                </div>
+            </div>
+
+            <!-- 슬라이더 -->
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="score1">점수</label>
+                    <input type="range" name="score" id="score1" value="50" min="0" max="100"/>
+                </div>
+            </div>
+
+            <!-- 스위치 -->
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="gender1">성별</label>
+                    <select id="gender1" name="gender" data-role="slider">
+                        <option value="male">남자</option>
+                        <option value="female">여자</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 라디오버튼 -->
+            <div data-role="content">
+                <fieldset data-role="controlgroup">
+                    <legend>학년</legend>
+                    <input type="radio" name="syear" id="syear1"value="1"/>
+                    <label for="syear1">1학년</label>
+                    <input type="radio" name="syear" id="syear2"value="2"/>
+                    <label for="syear2">2학년</label>
+                    <input type="radio" name="syear" id="syear3"value="3" checked = "checked"/>
+                    <label for="syear3">3학년</label>
+                    <input type="radio" name="syear" id="syear4"value="4"/>
+                    <label for="syear4">4학년</label>
+                </fieldset>
+
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>학기</legend>
+                    <input type="radio" name="semester" id = "semester1" value="1" checked="checked">
+                    <label for="semester1">1학기</label>
+                    <input type="radio" name="semester" id = "semester2" value="2">
+                    <label for="semester2">2학기</label>
+                </fieldset>
+            </div>
+
+
+            <!-- 체크박스 -->
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>연락매체</legend>
+                        <input type="checkbox" name="type1" value="1" id = "type1" checked="checked">
+                        <label for="type1">e-mail</label>
+                        <input type="checkbox" name="type2" value="2" id = "type2">
+                        <label for="type2">address</label>
+                        <input type="checkbox" name="type3" value="3" id = "type3" checked="checked">
+                        <label for="type3">phone</label>
+                    </fieldset>
+                </div>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>성별</legend>
+                    <input type="checkbox" name="gtype1" value="m" id = "gtype1" checked="checked">
+                    <label for="gtype1">남성</label>
+                    <input type="checkbox" name="gtype2" value="ㄹ" id = "gtype2">
+                    <label for="gtype2">여성</label>
+                </fieldset>
+            </div>
+
+
+            <!-- 선택항목(드롭다운) -->
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="age1">연령대</label>
+                    <select name="age1" id = "age1" data-inline="true"> <!--일반적인 드롭다운-->
+                        <!-- <select name="age1" id = "age1" data-native-menu="false" multiple="multiple"> 드롭다운+체크박스 -->
+                        <option value="">선택하세요</option>
+                        <optgroup label="그룹A">
+                            <option value="num1">0~9세</option>
+                            <option value="num1">10~19세</option>
+                            <option value="num1">20~29세</option>
+                        </optgroup>
+                        <optgroup label="그룹B">
+                            <option value="num1">30~39세</option>
+                            <option value="num1">40~49세</option>
+                            <option value="num1">50~59세</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div data-role="content">
                 <label>(1)도시이름
                     <input type="text" name="return" id="txt1">
                 </label>
