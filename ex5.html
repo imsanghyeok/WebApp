@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            1.게시판 WebApp 작성
+            2.성적 처리 WebApp 작성
+            1.1 성적 입력 기능( 이름, 3과목 성적 )
+            1.2 성적 알람표 출력( 입력순, 평균순 ) 기능
+            1.3 학생 검색 기능
+         -->
+        <meta charset="utf-8">
+        <title>게시판</title>
+        <meta name = "viewport" content = "width-device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+
+            <div data-role="header">
+                <h1>게시판</h1>
+            </div>
+
+            <div data-role="content">
+                <!-- 1라인 -->
+                <div class="ui-grid-b" >
+                    <div class="ui-block-a">
+                        <select name="drop" id = "drop1" data-inline="true" > <!--일반적인 드롭다운-->
+                            <option value="num1">제목</option>
+                            <option value="num1">내용</option>
+                            <option value="num1">작성자</option>
+                            <option value="num1">글번호</option>
+                        </select>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <input type = "search" name="input1" id="input1"/>
+                    </div>
+
+                    <div class="ui-block-c">
+                        <a href="#panel1" data-role="button" data-inline="true">검색</a>
+                    </div>
+                </div>
+
+                <!-- 2라인 -->
+
+                <table class = "ui-responsive table-stripe" id="my-table1" data-mode="" data-role="table">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성일자</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th><td>Hong</td><td>2019-03-12</td>
+                        </tr>
+                        <tr>
+                            <th>2</th><td>Kim</td><td>2019-03-12</td>
+                        </tr>
+                        <tr>
+                            <th>3</th><td>Lee</td><td>2019-03-12</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 3 라인 -->
+
+                <a href="#panel1" data-role="button" data-inline="true">글쓰기</a>
+                <a href="#panel2" data-role="button" data-inline="true">삭제</a>
+
+                <!-- 4 라인 -->
+                <table>
+                    <tr>
+                        <td><label for="title">제  목 : </label></td>
+                        <td><input type="text" name="title" id="title"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">작성일 : </label></td>
+                        <td><input type="text" name="date" id="date"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="content">내  용 : </label></td>
+                        <td><textarea id="content" rows="5" cols="25"></textarea></td>
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>footer영역</h1>
+            </div>
+
+        </div>
+    </body>
+</html>
